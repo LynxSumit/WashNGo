@@ -16,7 +16,7 @@ const LargeFillBtn = ({title , onPress}) => {
         }}
         style={{
             backgroundColor: '#430064',
-            width : 280,
+            width : '100%',
             borderRadius : 10,
             paddingVertical : 14,
             justifyContent : 'center',

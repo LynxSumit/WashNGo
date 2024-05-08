@@ -64,7 +64,9 @@ const EnterPhone = () => {
         setValue={setPhone}
         />
 <View style={{
-    marginTop : '50%'
+   position : 'absolute',
+    bottom : 30,
+    width : '90%',
 }}>
         <LargeFillBtn
         title='Continue'

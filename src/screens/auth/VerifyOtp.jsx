@@ -1,10 +1,11 @@
 import { Dimensions, Keyboard, KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { Appbar } from 'react-native-paper'
+import { Appbar, TextInput } from 'react-native-paper'
 import { MotiText, MotiView } from 'moti'
 import { CodeField, Cursor, useBlurOnFulfill, useClearByFocusCell } from 'react-native-confirmation-code-field'
 import { colors } from '../../constants/colors'
 import { useNavigation } from '@react-navigation/native'
+
 
 const VerifyOtp = () => {
     const [value, setValue] = useState("");
@@ -36,7 +37,10 @@ const VerifyOtp = () => {
            backgroundColor : 'white',
            width : Dimensions.get('window').width,
       }}>
-        <Appbar.BackAction style={{
+        <Appbar.BackAction iconColor={
+            colors.black
+        } style={{
+            
 
             
         }} onPress={() => {
@@ -217,11 +221,13 @@ const VerifyOtp = () => {
                 marginBottom : 18
             }}
             >
+               
                 <Text style={{
                     color : '#430064',
                     fontSize : 14,
                     fontWeight : '600'
                 }}>Send again</Text>
+
             </MotiView>
 
 

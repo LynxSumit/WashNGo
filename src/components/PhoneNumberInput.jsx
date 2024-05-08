@@ -15,11 +15,14 @@ const PhoneNumberInput = ({
     containerStyle={{
         borderColor : colors.lightGrey,
        borderRadius : 12,
-       paddingVertical : 4,
-       paddingHorizontal : 10,
-       width : 340,
-        borderWidth : .4
+      
+       paddingRight : 10,
+       width : '90%',
+        borderWidth : .4,
+       height : 80,
+       
     }}
+    
     codeTextStyle={{
         color : colors.darkGrey,
       
@@ -30,7 +33,7 @@ const PhoneNumberInput = ({
         backgroundColor : colors.white,
         borderLeftColor : colors.lightGrey,
         borderLeftWidth : .4,
-        paddingLeft : 10
+        paddingLeft : 10,
     }}
     textContainerStyle={{
         backgroundColor : colors.white

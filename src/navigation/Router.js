@@ -30,6 +30,9 @@ import SignUpDetails from '../screens/auth/SignupDetails';
 import VerifyOtp from '../screens/auth/VerifyOtp';
 import EnterPhone from '../screens/auth/EnterPhone';
 import ProfileSetup from '../screens/auth/ProfileSetup';
+import SelectGender from '../screens/auth/SelectGender';
+import YourInterests from '../screens/auth/YourInterests';
+import Introduction from '../screens/auth/Introduction';
 
 // Other necessary imports like Image, Platform, etc.
 
@@ -146,6 +149,9 @@ headerShown: false
       <Stack.Screen name="VerifyOtp" component={VerifyOtp} />
       <Stack.Screen name="SignupDetails" component={SignUpDetails} />
       <Stack.Screen name="ProfileSetup" component={ProfileSetup} />
+      <Stack.Screen name="SelectGender" component={SelectGender} />
+      <Stack.Screen name="YourInterests" component={YourInterests} />
+      <Stack.Screen name="Introduction" component={Introduction} />
       
       </Stack.Navigator>
     // Stack.Navigator for unauthenticated users remains the same

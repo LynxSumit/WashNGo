@@ -16,6 +16,7 @@ const PasswordField = ({
         flexDirection : 'row',
         alignItems : 'center',
         gap:  8,
+        width : '100%'
         // width : 280,
      
     }}>
@@ -43,14 +44,20 @@ const PasswordField = ({
             borderRadius : 14,
             borderWidth : .5,
             backgroundColor : colors.white,
-            width :  280
+            
+         
 
+        }}
+        contentStyle={{
+            color : colors.black,
         }}
        
         style={{
             paddingHorizontal : 6,
            borderRadius : 60,
-           width : 280
+           backgroundColor : colors.white,
+           width : '100%'
+           
         }}
         secureTextEntry={secure}
         right={

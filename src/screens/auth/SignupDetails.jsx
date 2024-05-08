@@ -81,7 +81,9 @@ const SignupDetails = () => {
       
 <View style={{
    gap : 12,
-   marginBottom : 18
+   marginBottom : 18,
+   width : '100%',
+   alignItems : 'center'
 }}>
     <Controller
     control={control}
@@ -100,7 +102,7 @@ const SignupDetails = () => {
             duration : 800
         }}
         style={{
-            width : 280,
+            width : "90%",
             // borderRadius : 60,
             // overflow : 'hidden',
             
@@ -133,10 +135,15 @@ const SignupDetails = () => {
             borderWidth : .5,
             backgroundColor : colors.white
         }}
+        contentStyle={{
+            color : colors.black,
+        }}
        
         style={{
             paddingHorizontal : 6,
-           borderRadius : 60
+           borderRadius : 60,
+           backgroundColor : colors.white
+
         }}
         />
         </MotiView>
@@ -165,7 +172,7 @@ const SignupDetails = () => {
             duration : 800
         }}
         style={{
-            width : 280,
+            width : "90%",
             // borderRadius : 60,
             // overflow : 'hidden',
             
@@ -199,10 +206,15 @@ const SignupDetails = () => {
             backgroundColor : colors.white
 
         }}
+        contentStyle={{
+            color : colors.black,
+        }}
        
         style={{
             paddingHorizontal : 6,
-           borderRadius : 60
+           borderRadius : 60,
+              backgroundColor : colors.white,
+              color: colors.black
         }}
         />
         </MotiView>
@@ -211,6 +223,7 @@ const SignupDetails = () => {
     rules={{ required: 'Username is required' }}
     defaultValue=''
     />
+   
     <Controller
     control={control}
     render={({ field: { onChange, onBlur, value } }) => (
@@ -228,7 +241,7 @@ const SignupDetails = () => {
             duration : 800
         }}
         style={{
-            width : 280,
+            width : "90%",
             // borderRadius : 60,
             // overflow : 'hidden',
         }}
@@ -265,7 +278,7 @@ const SignupDetails = () => {
             duration : 800
         }}
         style={{
-            width : 280,
+            width : "90%",
             // borderRadius : 60,
             // overflow : 'hidden',
         }}
@@ -301,13 +314,18 @@ const SignupDetails = () => {
         
         
         </View>
-        
-        <LargeFillBtn
-        title='Continue'
-        onPress={() => {
-          navigation.navigate('ProfileSetup')
-        }}
-        />
+        <View
+          style={{
+            width: '90%',
+            marginVertical: 10,
+          }}>
+          <LargeFillBtn
+            title="Confirm"
+            onPress={() => {
+                navigation.navigate('ProfileSetup')
+            }}
+          />
+        </View>
 
     </MotiView>
   )
