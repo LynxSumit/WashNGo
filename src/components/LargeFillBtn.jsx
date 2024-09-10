@@ -1,8 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { MotiPressable } from 'moti/interactions'
+import { MotiHover, MotiPressable } from 'moti/interactions'
+import { colors } from '../constants/colors'
+import { fontFamily } from '../utils/fonts'
 
-const LargeFillBtn = ({title , onPress}) => {
+const LargeFillBtn = ({title , onPress , loading=false}) => {
   return (
     <MotiPressable
     onPress={onPress}
@@ -15,19 +17,25 @@ const LargeFillBtn = ({title , onPress}) => {
             scale: 1
         }}
         style={{
-            backgroundColor: '#430064',
+            backgroundColor: colors.btnColor,
             width : '100%',
-            borderRadius : 10,
+            borderRadius : 40,
             paddingVertical : 14,
             justifyContent : 'center',
             alignItems : 'center',
         }}  
         >
-        <Text style={{
-            color: 'white',
-            fontSize: 16,
-            fontWeight: '500'
-        }}>{title}</Text>
+        {!loading ? <Text style={{
+            color: colors.btnText,
+            fontFamily : fontFamily.InterExtraBold,
+            fontSize: 18,
+            fontWeight: '700'
+        }}>{title}</Text> : <ActivityIndicator
+            size="small"
+            color={colors.btnText}
+            style={{marginRight : 10}}
+  
+        />}
         </MotiPressable>
   )
 }
